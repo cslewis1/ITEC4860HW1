@@ -25,11 +25,11 @@
   </div>
   
   <script>
-  $('#getQuote').click(function(e) {
+  $('#getQuotes').click(function(e) {
      e.preventDefault();
      var stock = $('#newQuote').val();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(json){
-        alert("Current price of " + stock + ": " + json['latestPrice']);
+        alert("Current price of " + + ": " + json['getQuotes']);
      });
   });
   </script>
