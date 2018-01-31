@@ -37,8 +37,8 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://favqs.com/api', function(a){
-        $("#stockQuote").html(a.body);
+     $.getJSON('https://quotesondesign.com/wp-json/post?filter[orderby]=rand', function(a){
+        $("#stockQuote").html(a.content;
      });
   });
   </script>
