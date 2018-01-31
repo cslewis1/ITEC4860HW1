@@ -17,16 +17,12 @@
 </head>
 
 <body>
-  <h1>Random Quotes</h1>
+  <h1>Game of Thrones</h1>
   <div>
     <button type="button" id="getQuote">Get Quotes</button>
   </div>
  
   <h2>Random Quotes</h2>
-  
-  <div>
-    <button type="button" id="rQuote">Get Quotes</button>
-  </div>
   
    <div id="randomQuote"> 
     <p>  </p>
@@ -47,7 +43,7 @@
   </script>
    
   <script>
-  $('#rQuote').click(function(e) {
+  $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://anapioficeandfire.com/api/characters', function(a){
         $("#randomQuote").html(a.characters);
