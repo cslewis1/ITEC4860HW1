@@ -39,7 +39,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://anapioficeandfire.com/api', function(a){
-        $("#randomQuote").html(a.books + <br> + a.characters + <br> + a.houses);
+        $("#randomQuote").html(a.books + a.characters + a.houses);
      });
   });
   </script>
@@ -48,7 +48,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
-       $("#gameQuote").html(a.quote + <br> + a.character);
+       $("#gameQuote").html(a.quote + a.character);
      });
   });
   </script>
