@@ -22,21 +22,21 @@
     <button type="button" id="getQuote">Get Quotes</button>
   </div> 
 
+  <h3>Stock Quotes</h3>
   <div id="stockQuote"> 
-    <h3>Stock Quotes</h3>
     <p>  </p>
   </div>
   
+   <h2>Game of Thrones Quotes</h2>
    <div id="gameQuote"> 
-     <h2>Game of Thrones Quotes</h2>
     <p>  </p>
   </div>
   
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0', function(a){
-        $("#stockQuote").html(a.quote);
+     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0', function(b){
+        $("#stockQuote").html(b.quote);
      });
   });
   </script>
