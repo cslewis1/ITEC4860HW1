@@ -33,6 +33,15 @@
    <div id="gameQuote"> 
     <p>  </p>
   </div>
+  
+  <script>
+  $('#getQuote').click(function(e) {
+     e.preventDefault();
+     $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
+       $("#gameQuote").html(a.quote + a.character);
+     });
+  });
+  </script>
    
   <script>
   $('#getQuote').click(function(e) {
@@ -43,13 +52,6 @@
   });
   </script>
   
-  <script>
-  $('#getQuote').click(function(e) {
-     e.preventDefault();
-     $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
-       $("#gameQuote").html(a.quote + a.character);
-     });
-  });
-  </script>
+  
 </body>
 </html>
