@@ -38,7 +38,7 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0.js', function(a){
+     $.getJSON('https://quotesondesign.com/api/3.0/api-3.0.js', function(a){
         $("#randomQuote").html(a.content);
      });
   });
