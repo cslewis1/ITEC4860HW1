@@ -11,7 +11,7 @@
     body {
       text-align:center;
       margin-top: 100px;
-      background-color:yellow;
+      background-color:white;
     }
   </style>
 </head>
@@ -19,17 +19,28 @@
 <body>
   <h3>Game of Thrones Quotes</h3>
   <div>
-    <button type="button" id="getQuote">Get Quote</button>
+    <button type="button" id="getQuote">Get Quotes</button>
   </div>
-  <div id="newQuote"> 
+  <div id="stockQuote"> 
     <p>  </p>
   </div>
+  
+   <div id="gameQuote"> 
+    <p>  </p>
+  </div>
+  
+  $('#search').click(function(e) {
+     e.preventDefault();
+     $.getJSON('https://api.iextrading.com/1.0/stock/' + stock + '/quote', function(a){
+        $("#stockQuote").html(a.quote);
+     });
+  });
   
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://got-quotes.herokuapp.com/quotes', function(json){
-       $("#getQuote").html(a.quote);
+     $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
+       $("#gameQuote").html(a.quote);
      });
   });
   </script>
