@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Game of Thrones Quotes</title>
+  <title>Random Quotes</title>
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -20,7 +20,7 @@
   <h3>Game of Thrones Quotes</h3>
   <div>
     <button type="button" id="getQuote">Get Quotes</button>
-  </div>
+  </div>  
   <div id="stockQuote"> 
     <p>  </p>
   </div>
@@ -29,12 +29,14 @@
     <p>  </p>
   </div>
   
+  <script>
   $('#search').click(function(e) {
      e.preventDefault();
      $.getJSON('https://api.iextrading.com/1.0/stock/' + stock + '/quote', function(a){
         $("#stockQuote").html(a.quote);
      });
   });
+  </script>
   
   <script>
   $('#getQuote').click(function(e) {
