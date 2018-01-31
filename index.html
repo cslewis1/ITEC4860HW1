@@ -38,8 +38,8 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://quotesondesign.com/api/3.0/api-3.0.js', function(a){
-        $("#randomQuote").html(a.content);
+     $.getJSON('https://anapioficeandfire.com/api', function(a){
+        $("#randomQuote").html(a.books + <br> + a.characters + <br> + a.houses);
      });
   });
   </script>
