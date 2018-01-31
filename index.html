@@ -9,8 +9,9 @@
   crossorigin="anonymous"></script>
   <style>
     body {
-       margin-top: 100px;
-       margin-left: 100px;
+      text-align:center;
+      margin-top: 100px;
+      background-color:yellow;
     }
   </style>
 </head>
@@ -21,14 +22,14 @@
     <button type="button" id="getQuote">Get Quote</button>
   </div>
   <div id="newQuote"> 
-    <p>""</p>
+    <p>  </p>
   </div>
   
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(json){
-        alert(json['getQuotes']);
+       $("#getQuote").html(a.quotes);
      });
   });
   </script>
