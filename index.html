@@ -17,22 +17,25 @@
 </head>
 
 <body>
-  <h3>Game of Thrones Quotes</h3>
+  <h1>Random Quotes</h1>
   <div>
     <button type="button" id="getQuote">Get Quotes</button>
-  </div>  
+  </div> 
+
   <div id="stockQuote"> 
+    <h3>Stock Quotes</h3>
     <p>  </p>
   </div>
   
    <div id="gameQuote"> 
+     <h2>Game of Thrones Quotes</h2>
     <p>  </p>
   </div>
   
   <script>
-  $('#search').click(function(e) {
+  $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://api.iextrading.com/1.0/stock/' + stock + '/quote', function(a){
+     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0', function(a){
         $("#stockQuote").html(a.quote);
      });
   });
