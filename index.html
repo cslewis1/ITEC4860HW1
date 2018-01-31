@@ -23,14 +23,23 @@
   </div>
   
   <br>
-
+ 
+  <h3>Stock Quotes</h3>
+  <div id="stockQuote"> 
+    <p>  </p>
+  </div>
+  
+   <h2>Game of Thrones Quotes</h2>
+   <div id="gameQuote"> 
+    <p>  </p>
+  </div>
  
   
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://quotesondesign.com/wp-json/post?filter[orderby]=rand', function(a){
-        $("#stockQuote").html(a.content;
+        $("#stockQuote").html(a.content);
      });
   });
   </script>
