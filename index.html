@@ -21,8 +21,6 @@
   <div>
     <button type="button" id="getQuote">Get Quotes</button>
   </div>
-  
-  <br>
  
   <h2>Random Quotes</h2>
    <div id="randomQuote"> 
@@ -46,7 +44,7 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://anapioficeandfire.com/api/characters/583', function(a){
+     $.getJSON('https://anapioficeandfire.com/api/characters', function(a){
         $("#randomQuote").html(a.characters);
      });
   });
