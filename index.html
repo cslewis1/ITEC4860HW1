@@ -2,7 +2,7 @@
 
 <head>
   <title>Random Quotes</title>
-  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT 8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -23,6 +23,11 @@
   </div>
  
   <h2>Random Quotes</h2>
+  
+  <div>
+    <button type="button" id="rQuote">Get Quotes</button>
+  </div>
+  
    <div id="randomQuote"> 
     <p>  </p>
   </div>
@@ -42,7 +47,7 @@
   </script>
    
   <script>
-  $('#getQuote').click(function(e) {
+  $('#rQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://anapioficeandfire.com/api/characters', function(a){
         $("#randomQuote").html(a.characters);
