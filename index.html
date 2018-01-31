@@ -24,8 +24,8 @@
   
   <br>
  
-  <h3>Stock Quotes</h3>
-  <div id="stockQuote"> 
+  <h2>Random Quotes</h2>
+   <div id="randomQuote"> 
     <p>  </p>
   </div>
   
@@ -39,7 +39,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('http://quotesondesign.com/api/3.0/api-3.0.js', function(a){
-        $("#stockQuote").html(a.content);
+        $("#randomQuote").html(a.content);
      });
   });
   </script>
@@ -48,7 +48,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
-       $("#gameQuote").html(a.quote + a.character);
+       $("#gameQuote").html(a.quote + <br> + a.character);
      });
   });
   </script>
