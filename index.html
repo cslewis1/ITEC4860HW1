@@ -37,8 +37,8 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0.js', function(b){
-        $("#stockQuote").html(b.quote);
+     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0.js', function(a){
+        $("#stockQuote").html(a.quote);
      });
   });
   </script>
@@ -47,7 +47,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
-       $("#gameQuote").html(a.quote);
+       $("#gameQuote").html(a.content);
      });
   });
   </script>
