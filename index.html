@@ -20,7 +20,9 @@
   <h1>Random Quotes</h1>
   <div>
     <button type="button" id="getQuote">Get Quotes</button>
-  </div> 
+  </div>
+  
+  <br>
 
   <h3>Stock Quotes</h3>
   <div id="stockQuote"> 
@@ -35,7 +37,7 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0', function(b){
+     $.getJSON('http://quotesondesign.com/api/3.0/api-3.0.js', function(b){
         $("#stockQuote").html(b.quote);
      });
   });
