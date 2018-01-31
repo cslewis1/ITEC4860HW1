@@ -44,8 +44,8 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://anapioficeandfire.com/api/houses', function(a){
-        $("#randomQuote").html(a.house);
+     $.getJSON('https://anapioficeandfire.com/api', function(a){
+        $("#randomQuote").html(a.name + " " + a.words);
      });
   });
   </script>
