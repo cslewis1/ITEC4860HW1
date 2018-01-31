@@ -48,7 +48,7 @@
   $('#getQuote').click(function(e) {
      e.preventDefault();
      $.getJSON('https://got-quotes.herokuapp.com/quotes', function(a){
-       $("#gameQuote").html(a.content);
+       $("#gameQuote").html(a.quote + a.character);
      });
   });
   </script>
