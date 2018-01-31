@@ -37,7 +37,7 @@
   <script>
   $('#getQuote').click(function(e) {
      e.preventDefault();
-     $.getJSON('https://anapioficeandfire.com/api/characters/583', function(a){
+     $.getJSONP('https://anapioficeandfire.com/api/characters/583', function(a){
         $("#randomQuote").html(a.characters);
      });
   });
